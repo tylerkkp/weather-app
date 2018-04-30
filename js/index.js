@@ -58,7 +58,7 @@ function toFahr(unitf)
 {
   units = "fahr";
 document.getElementById("tempunits").innerHTML ="&#8457;";
-  document.getElementById("temp").innerHTML = $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
+  $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
     $("#temp").html(response["main"]["temp"] *9/5+32);
 }, "jsonp");
   
@@ -68,7 +68,7 @@ function toCel(unitf)
 {
   units = "cel";
 document.getElementById("tempunits").innerHTML ="&#8451;";
-  document.getElementById("temp").innerHTML = $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
+  $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
     $("#temp").html(response["main"]["temp"]);
 }, "jsonp");
   
