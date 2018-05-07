@@ -24,10 +24,7 @@ var data = $.parseJSON($.ajax({
 
 // TODO: have the background change depending on the weather conditions
 var body = document.getElementsByTagName('body')[0];
-body.style.background = 'url(../assets/01d.jpg)';
-//old default file path. retain until done testing changing backgrounds
-//'url(https://images.pexels.com/photos/268917/pexels-photo-268917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
-
+body.style.background = 'url(https://images.pexels.com/photos/268917/pexels-photo-268917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)';
 
 // Creates the url address at which to find the icon url
 // TODO: find better source for icons... prefer 'flat' style
