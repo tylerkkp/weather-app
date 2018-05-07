@@ -26,8 +26,11 @@ var data = $.parseJSON($.ajax({
 var body = document.getElementsByTagName('body')[0];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 body.style.background = 'url(https://images.pexels.com/photos/268917/pexels-photo-268917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)';
 =======
+=======
+>>>>>>> b6dd341b193ddd3feb3f9596ace66690d84d72ab
 =======
 >>>>>>> b6dd341b193ddd3feb3f9596ace66690d84d72ab
 body.style.background = 'url(https://github.com/tylerkkp/weather-app/assets/01d.jpg)';
