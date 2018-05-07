@@ -1,3 +1,9 @@
+// NOTE: There's a known bug with the fcc weather API where it defaults to a city
+// in Japan, so the temperature reading can get messed up. 
+// TODO: Change to a more consistent API that doesn't exhibit the same behavior.
+// openweathermap would be ideal since the fcc API is just a cached version of that,
+// and the icon codes would be the same.
+
 var weatherImages = {};
 var weather = "test";
 var units = "cel";
@@ -45,31 +51,31 @@ $.get("https://api.ipdata.co", function (response) {
     $("#country").html(response['country_name']);
 }, "jsonp");
 
+// Set values for city/state/country
 document.getElementById('city').value = city;
 document.getElementById('state').value = state;
 document.getElementById('country').value = country;
 
+// Retrieve temperature using the fcc weather API
 $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
     $("#temp").html(response["main"]["temp"]);
 }, "jsonp");
 
 //set units to fahrenheit
-function toFahr(unitf)
-{
+function toFahr(unitf) {
   units = "fahr";
-document.getElementById("tempunits").innerHTML ="&#8457;";
   $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
     $("#temp").html(response["main"]["temp"] *9/5+32);
+    document.getElementById("tempunits").innerHTML ="&#8457;";
 }, "jsonp");
   
 }
 //set units to celcius
-function toCel(unitf)
-{
+function toCel(unitf) {
   units = "cel";
-document.getElementById("tempunits").innerHTML ="&#8451;";
   $.get("https://fcc-weather-api.glitch.me/api/current?lat=" + data.latitude + "&lon=" + data.longitude, function (response) {
     $("#temp").html(response["main"]["temp"]);
+    document.getElementById("tempunits").innerHTML ="&#8451;";
 }, "jsonp");
   
 }
