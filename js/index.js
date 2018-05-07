@@ -77,5 +77,4 @@ function toCel(unitf) {
     $("#temp").html(response["main"]["temp"]);
     document.getElementById("tempunits").innerHTML ="&#8451;";
 }, "jsonp");
-  
 }
