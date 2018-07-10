@@ -12,7 +12,8 @@ var unitvalue = "&#8457;";
 
 //get latitude and longitude data
 var data = $.parseJSON($.ajax({
-        url:  'https://api.ipdata.co',
+        type: 'GET',
+        url: 'https://api.ipdata.co',
         dataType: "json", 
         async: false
     }).responseText);
