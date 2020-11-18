@@ -1,6 +1,6 @@
 ## Local Weather
 
-#### A Project for Free Code Camp
+#### Not currently running - requires update
 
 Displays the current weather conditions and temperature (based on ip address)
 
