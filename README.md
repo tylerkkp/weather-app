@@ -1,7 +1,5 @@
 ## Local Weather
 
-#### Not currently running - requires update
-
 Displays the current weather conditions and temperature (based on ip address)
 
 ![alt text][logo]
@@ -13,7 +11,7 @@ Displays the current weather conditions and temperature (based on ip address)
 * CSS
 * Javascript
 
-Site can be viewed at [Github Pages](https://tkkp.dev/weather-app/)
+Deployed using [Netlify](https://quizzical-brown-535200.netlify.app/)
 
 Built using [Codepen.io](https://codepen.io/tylerkkp/pen/dmBGVa)
 
