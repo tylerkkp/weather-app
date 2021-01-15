@@ -7,13 +7,14 @@
 var weatherImages = {};
 var weather = "test";
 var units = "cel";
+var ipdataurl = "https://api.ipdata.co/?api-key=f09221b412c8423506c7545670fd0340b48c22ca177513710b10dc79";
 //initialize temp as celcius
 var unitvalue = "&#8457;";
 
 //get latitude and longitude data
 var data = $.parseJSON($.ajax({
         type: 'GET',
-        url: 'https://api.ipdata.co',
+        url: ipdataurl,
         dataType: "json", 
         async: false
     }).responseText);
@@ -40,15 +41,15 @@ var icondata = $.parseJSON($.ajax({
 document.getElementById("icon").src = ico;
 
 // Get City Data
-$.get("https://api.ipdata.co", function (response) {
+$.get(ipdataurl, function (response) {
     $("#city").html(response['city']+',');
 }, "jsonp");
 // Get State Data
-$.get("https://api.ipdata.co", function (response) {
+$.get(ipdataurl, function (response) {
     $("#state").html(response['region_code']);
 }, "jsonp");
 // Get Country Data
-$.get("https://api.ipdata.co", function (response) {
+$.get(ipdataurl, function (response) {
     $("#country").html(response['country_name']);
 }, "jsonp");
 
